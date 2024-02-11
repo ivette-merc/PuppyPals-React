@@ -12,6 +12,9 @@ function App() {
     <>
       <div>
         <h1>Hello World</h1>
+        {puppies.map((puppy) => {
+          return <p>{puppy.name}</p>;
+        })}
       </div>
     </>
   );
