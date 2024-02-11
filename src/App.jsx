@@ -7,13 +7,13 @@ import { puppyList } from "./data.js";
 function App() {
   console.log(useState);
   const [puppies, setPuppies] = useState(puppyList);
-  console.log(puppies);
+  console.log("puppyList: ", puppies);
   return (
     <>
-      <div>
-        <h1>Hello World</h1>
+      <div className="App">
+        <h1>Get to know our Puppies 🐶!</h1>
         {puppies.map((puppy) => {
-          return <p>{puppy.name}</p>;
+          return <p key={puppy.id}> {puppy.name}</p>;
         })}
       </div>
     </>
