@@ -17,7 +17,7 @@ function App() {
         <h1>Get to know our Puppies 🐶!</h1>
         {puppies.map((puppy) => {
           return (
-            <p
+            <p className = "puppylist"
               onClick={() => {
                 setFeatPupId(puppy.id);
               }}
@@ -29,9 +29,9 @@ function App() {
           );
         })}
         {featPupId && ( //why can {featPupId} be written outside the div?
-          <div>
+          <div className="puppyinfo">
             <h2>{featuredPup.name}</h2>
-            <ul>
+            <ul className="listDetail">
               <li>Age: {featuredPup.age}</li>
               <li>Email: {featuredPup.email}</li>
             </ul>
